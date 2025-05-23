@@ -1,0 +1,11 @@
+@import './modal.css';
+@import './text.css';
+
+html {
+  font-size: 4px;
+  @apply text-gray-950;
+}
+body {
+  font-size: 4rem;
+  @apply bg-gray-50;
+}
