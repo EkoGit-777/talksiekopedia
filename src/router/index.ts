@@ -14,7 +14,7 @@ const routes = [
         path: '/',
         name: 'dashboard',
         meta: { title: 'Talksiekopedia' },
-        component: () => import('../views/dashboard/index-page.vue'),
+        component: () => import('../views/dashboard-page.vue'),
       },
       {
         path: 'change-log',
@@ -36,7 +36,7 @@ const routes = [
         path: 'login',
         name: 'login',
         meta: { title: 'Talksiekopedia' },
-        component: () => import('../views/auth/index-page.vue')
+        component: () => import('../views/login-page.vue')
       },
     ]
   },

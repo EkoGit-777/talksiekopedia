@@ -1,7 +1,10 @@
-interface AuthType {
-  id: number
+interface UserType {
   username: string
   avatar: string
+}
+
+interface AuthType extends UserType {
+  id: number
   passcode: string
 }
 
@@ -19,4 +22,8 @@ interface ChangeLogType {
 interface MessageType {
   date: string
   message: string
+}
+
+interface ChatType extends MessageType {
+  user: UserType
 }
