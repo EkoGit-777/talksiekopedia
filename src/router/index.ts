@@ -22,6 +22,18 @@ const routes = [
         meta: { title: 'Talksiekopedia' },
         component: () => import('../views/change-log-page.vue')
       },
+      {
+        path: 'room/:code',
+        name: 'room',
+        meta: { title: 'Talksiekopedia' },
+        component: () => import('../views/room-page.vue')
+      },
+      {
+        path: 'chat/:code',
+        name: 'privateChat',
+        meta: { title: 'Talksiekopedia' },
+        component: () => import('../views/room-page.vue')
+      },
       // {
       //   path: '/:pathMatch(.*)*',
       //   component: () => import('@/views/errors/NotFound.vue'),

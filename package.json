@@ -1,6 +1,6 @@
 {
   "name": "talksiekopedia",
-  "version": "0.1.00",
+  "version": "1.0.00",
   "private": true,
   "type": "module",
   "scripts": {
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.6.1",
+    "axios": "^1.9.0",
     "date-fns": "^4.1.0",
     "pinia": "^3.0.1",
     "pusher-js": "^8.4.0",

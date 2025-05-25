@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { useConfigStore } from './config'
 
 interface State {
   messages: ChatType[]
@@ -13,7 +14,12 @@ export const useChatStore = defineStore('chat', {
   getters: {},
   actions: {
     insertChat(newChat: ChatType) {
-      this.messages.push(newChat)
+      const configStore = useConfigStore()
+      this.messages.push({...newChat, user: {
+        id: newChat.user.id,
+        name: newChat.user.name,
+        avatar: configStore.api.avatar + newChat.user.avatar,
+      }})
     }
   },
 })

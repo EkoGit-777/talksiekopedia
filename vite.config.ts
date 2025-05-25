@@ -24,8 +24,6 @@ export default defineConfig(({ mode }): UserConfig => {
 
     define: {
       'import.meta.env.PACKAGE_VERSION': JSON.stringify(process.env.npm_package_version),
-      'import.meta.env.PUSHER_APP_KEY': JSON.stringify(process.env.PUSHER_APP_KEY),
-      'import.meta.env.PUSHER_APP_CLUSTER': JSON.stringify(process.env.PUSHER_APP_CLUSTER),
     },
 
     server: {

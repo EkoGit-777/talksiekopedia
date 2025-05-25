@@ -11,7 +11,7 @@ export const useAuthStore = defineStore('auth', {
     return {
       user: {
         id: 0,
-        username: '',
+        name: '',
         avatar: '',
         passcode: '',
       },
@@ -27,11 +27,11 @@ export const useAuthStore = defineStore('auth', {
     setUser(auth: AuthType) {
       this.user = auth
     },
-    setUsername(username: string) {
-      this.user.username = username
+    setUsername(name: string) {
+      this.user.name = name
       const listStore = useListStore()
-      if(this.user.avatar == '' || this.user.avatar.includes('username'))
-      this.setAvatar(`username?username=${username}&background=${listStore.colorTemplate[0].background}&color=${listStore.colorTemplate[0].text}`)
+      if(this.user.avatar == '' || this.user.avatar.includes('name'))
+      this.setAvatar(`username?username=${name}&background=${listStore.colorTemplate[0].background}&color=${listStore.colorTemplate[0].text}`)
     },
     setAvatar(query: string) {
       this.user.avatar = query

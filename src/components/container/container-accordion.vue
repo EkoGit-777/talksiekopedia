@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+  import { computed, ref } from 'vue'
 
-defineProps<{
-  isOpen: boolean
-}>()
+  const props = defineProps<{
+    isOpen: boolean
+    contentHeight?: number
+  }>()
 
-const content = ref<HTMLDivElement>()
+  const content = ref<HTMLDivElement>()
 
-const height = computed(() => content.value?.scrollHeight ?? 0)
+  const height = computed(() => props.contentHeight ?? content.value?.scrollHeight ?? 0)
 </script>
 
 <template>
